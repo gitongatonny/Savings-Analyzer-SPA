@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="tracker.css">
+</head>
+
+<body>
+
+    <h1>Student Finance Tracker</h1>
+    <div class="container">
+        <div class="column">
+            <h2>Expenses for the month</h2>
+            <div class="form-group">
+                <label for="expense1">Expense 1:</label>
+                <input type="text" id="expense1" placeholder="Expense name">
+                <label for="amount1">Amount:</label>
+                <input type="number" id="amount1" placeholder="Amount">
+            </div>
+
+            <div class="form-group">
+                <label for="expense2">Expense 2:</label>
+                <input type="text" id="expense2" placeholder="Expense name">
+                <label for="amount2">Amount:</label>
+                <input type="number" id="amount2" placeholder="Amount">
+            </div>
+
+            <div class="form-group">
+                <label for="expense3">Expense 3:</label>
+                <input type="text" id="expense3" placeholder="Expense name">
+                <label for="amount3">Amount:</label>
+                <input type="number" id="amount3" placeholder="Amount">
+            </div>
+
+            <div class="form-group">
+                <label for="expense4">Expense 4:</label>
+                <input type="text" id="expense4" placeholder="Expense name">
+                <label for="amount4">Amount:</label>
+                <input type="number" id="amount4" placeholder="Amount">
+            </div>
+
+            <h2>Income for the month</h2>
+            <div class="form-group">
+                <label for="income1">Income 1:</label>
+                <input type="text" id="income1" placeholder="Income source">
+                <label for="incomeAmount1">Amount:</label>
+                <input type="number" id="incomeAmount1" placeholder="Amount">
+            </div>
+            <div class="form-group">
+                <label for="income2">Income 2:</label>
+                <input type="text" id="income2" placeholder="Income source">
+                <label for="incomeAmount2">Amount:</label>
+                <input type="number" id="incomeAmount2" placeholder="Amount">
+            </div>
+
+            <h2>Savings for the month</h2>
+            <div class="form-group">
+                <label for="savings">Savings Amount:</label>
+                <input type="number" id="savings" placeholder="Savings amount">
+            </div>
+
+            <button id="submitBtn">Submit</button>
+        </div>
+    </div>
+
+    <!-- Results Table -->
+    <div id="totals" class="container" style="display:none;">
+        <h2>This Month's Finance Chart</h2>
+        <canvas id="pieChart" width="300" height="300"></canvas>
+        <table>
+            <tr>
+                <th>Total Income</th>
+                <th>Total Expenses</th>
+                <th>Savings</th>
+                <th>Remaining Money</th>
+            </tr>
+            <tr id="results">
+                <td id="totalIncome">-</td>
+                <td id="totalExpenses">-</td>
+                <td id="savingsValue">-</td>
+                <td id="remainingMoney">-</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!-- Pie Chart -->
+    <div id="pieChartContainer" class="container" style="display:none;">
+        <canvas id="pieChart" width="300" height="300"></canvas>
+    </div>
+
+    <script src="tracker.js"></script>
+</body>
+
+</html>
