@@ -11,6 +11,9 @@ Its functionalities are:
   * A pie chart of the expenses is created.
   * A table displaying the totals [income, expenses & potential savings] is displayed.
 
-Below is a screenshot of the web-app in action.
+The pie chart sections' colours change randomly* on each submission of data.
 
-![std-budget-organizer](https://github.com/tonnygitonga/Student-Budget-Organizer-SPA/assets/118627853/b73a3328-d39d-489a-a365-7ba92e663b83)
+Below is a screenshot of the web-app.
+
+![potential-savings-calc](https://github.com/tonnygitonga/Simple-Savings-Calculator-SPA/assets/118627853/1eb48ed4-3430-402b-a028-3d44ed432888)
+
