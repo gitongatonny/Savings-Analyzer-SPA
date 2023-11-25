@@ -76,25 +76,12 @@ class Expenses {
     }
 }
 
-class Savings {
-    constructor() {
-        this.savingsAmount = 0;
-    }
 
-    setSavingsAmount(amount) {
-        this.savingsAmount = parseFloat(amount) || 0;
-    }
-
-    getSavingsAmount() {
-        return this.savingsAmount;
-    }
-}
 
 class ExpenseTracker {
     constructor() {
         this.income = new Income();
         this.expenses = new Expenses();
-        this.savings = new Savings();
     }
 
     calculateTotals() {
@@ -135,9 +122,6 @@ class ExpenseTracker {
         // Results table
         document.getElementById("totalIncome").textContent = this.expenses.formatNumber(totalIncome.toFixed(2));
         document.getElementById("totalExpenses").textContent = this.expenses.formatNumber(totalExpenses.toFixed(2));
-        document.getElementById("savingsValue").textContent = this.expenses.formatNumber(this.savings.getSavingsAmount().toFixed(2));
-
-        // Rename "Remaining Money" to "Potential Savings"
         document.getElementById("remainingMoney").textContent = this.expenses.formatNumber(remainingMoney.toFixed(2));
         document.getElementById("remainingMoneyHeader").textContent = "Potential Savings";
 
