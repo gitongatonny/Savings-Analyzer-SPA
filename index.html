@@ -55,11 +55,7 @@
                 <input type="number" id="incomeAmount2" placeholder="Amount">
             </div>
 
-            <h2>Savings for the month</h2>
-            <div class="form-group">
-                <label for="savings">Savings Amount:</label>
-                <input type="number" id="savings" placeholder="Savings amount">
-            </div>
+            <!-- Removed Savings Section -->
 
             <button id="submitBtn">Submit</button>
         </div>
@@ -74,7 +70,7 @@
                 <th>Total Income</th>
                 <th>Total Expenses</th>
                 <th>Savings</th>
-                <th>Remaining Money</th>
+                <th id="remainingMoneyHeader">Potential Savings</th>
             </tr>
             <tr id="results">
                 <td id="totalIncome">-</td>
@@ -84,7 +80,6 @@
             </tr>
         </table>
     </div>
-
 
     <!-- Pie Chart -->
     <div id="pieChartContainer" class="container" style="display:none;">
