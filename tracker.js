@@ -127,18 +127,19 @@ class ExpenseTracker {
             parseFloat(document.getElementById("incomeAmount2").value || 0)
         ];
 
-        this.savings.setSavingsAmount(parseFloat(document.getElementById("savings").value || 0));
-
         // Calculate totals
         var totalIncome = this.income.calculateTotalIncome();
         var totalExpenses = this.expenses.calculateTotalExpenses();
-        var remainingMoney = totalIncome - totalExpenses + this.savings.getSavingsAmount();
+        var remainingMoney = totalIncome - totalExpenses;
 
         // Results table
         document.getElementById("totalIncome").textContent = this.expenses.formatNumber(totalIncome.toFixed(2));
         document.getElementById("totalExpenses").textContent = this.expenses.formatNumber(totalExpenses.toFixed(2));
         document.getElementById("savingsValue").textContent = this.expenses.formatNumber(this.savings.getSavingsAmount().toFixed(2));
+
+        // Rename "Remaining Money" to "Potential Savings"
         document.getElementById("remainingMoney").textContent = this.expenses.formatNumber(remainingMoney.toFixed(2));
+        document.getElementById("remainingMoneyHeader").textContent = "Potential Savings";
 
         document.getElementById("totals").style.display = "block";
 
