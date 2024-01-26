@@ -1,4 +1,4 @@
-# Simple Savings Calculator [SPA]
+# Savings Calculator [SPA]
 
 This simple webapp calculates the user's potential savings.
 It's a static webpage that stores no data.
